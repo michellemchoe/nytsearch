@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>NYT Search</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.4.0/js/all.js"></script>
+</head>
+
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation" id="pageLogo">
+        <div class="navbar-brand">
+            <div class="navbar-item">
+                <img src="new-york-times-icon.png" alt="New York Times Logo" id="nytLogo">
+                <div class="pageTitle"> &nbsp; New York Times Search</div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="columns is-centered">
+        <div class="column is-three-fifths">
+            <div class="card">
+                <header class="card-header">
+                    <p class="card-header-title" id="topArticlesTitle">
+                        Search Parameters
+                    </p>
+                </header>
+                <div class="card-content" id="searchParametersContent">
+
+                    <div class="field">
+                        <label class="label">Search Term:</label>
+                        <div class="control">
+                            <input class="input" type="text" id="searchTerm">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Number of Records to Retrieve</label>
+                        <nav class="navbar" role="navigation" aria-label="dropdown navigation">
+                            <div class="navbar-item has-dropdown is-hoverable" id="recordNumber">
+                                <a class="navbar-link" id="recordCountLabel">
+                                    Choose number of records to retrieve
+                                </a>
+
+                                <div class="navbar-dropdown">
+                                    <a class="navbar-item" id="oneRecord">
+                                        1
+                                    </a>
+                                    <a class="navbar-item" id="fiveRecord">
+                                        5
+                                    </a>
+                                    <a class="navbar-item" id="tenRecords">
+                                        10
+                                    </a>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Start Year (Optional)</label>
+                        <div class="control">
+                            <input class="input" type="text" id="startYear">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">End Year (Optional)</label>
+                        <div class="control">
+                            <input class="input" type="text" id="endYear">
+                        </div>
+                    </div>
+
+                    <div class="field is-grouped">
+                        <div class="control">
+                            <button class="button is-link" id="submitButton">Submit</button>
+                        </div>
+                        <div class="control">
+                            <button class="button is-text" id="clearResultsButton">Clear Results</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="columns is-centered">
+        <div class="column is-three-fifths">
+            <div class="card">
+                <header class="card-header">
+                    <p class="card-header-title" id="topArticlesTitle">
+                        Top Articles
+                    </p>
+                </header>
+                <div class="card-content" id="topArticlesContent">
+                    <div class="content">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="backend.js"></script>
+</body>
+
+</html>
